@@ -1,11 +1,31 @@
 @import 'variables';
 
-body {
-  color: $main-color;
-}
-
-a {
-  color: $main-color;
-}
-
 @import 'jumbotron';
+
+// update primary bootstrap color
+//$primary: red;
+// update 1/12 grid
+$grid-columns: 4;
+// update background color jumbotron
+$jumbotron-bg: rgb(245, 226, 140);
+// update link color
+$link-color: green;
+
+//declare all bootstrap
+//@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//custom bootstrap declaration
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/utilities';
+
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/code';
+
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/jumbotron';
