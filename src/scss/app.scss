@@ -1,3 +1,11 @@
+@import 'variables';
+
 body {
-  color: red;
+  color: $main-color;
 }
+
+a {
+  color: $main-color;
+}
+
+@import 'jumbotron';

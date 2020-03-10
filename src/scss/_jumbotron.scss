@@ -1,0 +1,19 @@
+.jumbotron {
+  // mon commentaire
+
+  color: $main-color;
+
+  .btn-primary {
+    background-color: $main-color;
+    border-color: darken($main-color, 10%);
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+      border-color: darken($main-color, 20%);
+    }
+  }
+
+  @media (max-width: 800px) {
+    color: #000;
+  }
+}
