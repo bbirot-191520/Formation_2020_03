@@ -5,8 +5,11 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
     "chai": "^4.2.0",
     "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
     "html-webpack-plugin": "^3.2.0",
     "htmlhint": "^0.11.0",
     "husky": "^4.2.3",
@@ -32,6 +35,7 @@
     "serve:src": "webpack-dev-server --mode development",
     "prettier": "prettier **/*.{js,html,css,scss,md,ts,json} --write",
     "lint:html": "htmlhint",
+    "lint:ts": "eslint src/**/*.ts",
     "build:scss": "node-sass --source-map true --recursive --output src/css --output-style compressed src/scss",
     "watch:scss": "nodemon --ext scss --exec npm run build:scss",
     "build:dev": "rimraf dist && webpack --mode development",
