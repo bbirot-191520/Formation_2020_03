@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //ou solution 2
 const config = {
   devtool: 'source-map',
-  entry: './src/js/main.js',
+  entry: './src/ts/main.ts',
   plugins: [
     // copier le fichier html dans le dossier ./dist
     new HtmlWebpackPlugin({
@@ -19,6 +19,9 @@ const config = {
     // générer le fichier main.css et l'inclure ds le html
     new MiniCssExtractPlugin(),
   ],
+  resolve: {
+    extensions: ['.js', '.json', '.ts'],
+  },
   module: {
     rules: [
       {
@@ -37,6 +40,10 @@ const config = {
           // Compiles Sass to CSS
           'sass-loader',
         ],
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
       },
       {
         test: /\.json5$/,
